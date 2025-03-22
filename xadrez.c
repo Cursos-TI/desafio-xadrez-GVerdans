@@ -1,4 +1,5 @@
-//https://github.com/GVerdans/Programacao-em-C
+// https://github.com/GVerdans/Programacao-em-C
+// https://github.com/Cursos-TI/desafio-xadrez-GVerdans/tree/main
 
 #include <stdio.h>
 
@@ -12,6 +13,7 @@ int main() {
     printf("|| 1. Torre              ||\n");
     printf("|| 2. Bispo              ||\n");
     printf("|| 3. Rainha             ||\n");
+    printf("|| 4. Cavalo             ||\n");
     printf("+++++++++++++++++++++++++++\n\n");
     printf("Escolha qual peça você quer mover: ");
     scanf("%d", &opcaoXadrez);
@@ -40,11 +42,29 @@ int main() {
         case 3:
             
             printf("\nVoce escolheu a Rainha !\n\n");
-
+            
             while(movRainha < 8){
-            printf("Rainha se Moveu para Esquerda !\n");
-            movRainha++;
+                printf("Rainha se Moveu para Esquerda !\n");
+                movRainha++;
             }
+        break;
+            
+        case 4:
+            printf("\nVoce escolheu o Cavalo !\n\n"); // duas para baixo e uma para esquerda.
+
+            for (int i = 0; i < 2; i++) { // Loop para mover duas casas para baixo
+                printf("O cavalo se moveu para baixo!\n");
+                
+                while(i == 1){ // Loop para o cavalo se mover para esquerda quando bater as duas casas para baixo.
+                    printf("O Cabalo se moveu para esquerda !\n");
+                    i++;
+                    // printf("%d\n", i); 
+                }
+            
+            }
+
+
+
         break;
 
     }
